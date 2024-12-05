@@ -1,24 +1,24 @@
 # For a description of config parameters, go to
 # https://fireline.pages.mitre.org/simfire/config.html
 area:
-  screen_size: [225, 450] # h, w
-  pixel_scale: 50
+  screen_size: [225, 450] 
+  pixel_scale: 50 
 
 display:
-  fire_size: 2
-  control_line_size: 2
-  agent_size: 4
-  rescale_factor: 2
+  fire_size: 2 
+  control_line_size: 2 
+  agent_size: 16
+  rescale_factor: 16 
 
 simulation:
-  update_rate: 1
+  update_rate: 5
   runtime: 15h
   headless: false
   draw_spread_graph: false
   record: true
   save_data: true
   data_type: "npy"
-  sf_home: "~/.simfire"
+  sf_home: "/Users/ardyh/Desktop/CSCI513-CPS/project/px4_sandbox/simfire"
 
 mitigation:
   ros_attenuation: false
@@ -27,9 +27,9 @@ operational:
   seed:
   latitude: 38.422 # top left corner
   longitude: -118.266 # top left corner
-  height: 2000 # in meters
-  width: 2000 # in meters
-  resolution: 30 # in meters
+  height: 20000  # meters
+  width: 20000   # meters
+  resolution: 30 # meters per pixel
   year: 2020
 
 terrain:

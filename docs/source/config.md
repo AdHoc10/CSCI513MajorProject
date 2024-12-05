@@ -387,7 +387,7 @@ simulation:
   record: true
   save_data: true
   data_type: "npy"
-  sf_home: "~/.simfire"
+  sf_home: "/Users/ardyh/Desktop/CSCI513-CPS/project/px4_sandbox/simfire"
 
 mitigation:
   ros_attenuation: false

@@ -1,0 +1,174 @@
+{
+  "config": {
+    "area": {
+      "screen_size": [
+        581,
+        581
+      ],
+      "pixel_scale": 98
+    },
+    "display": {
+      "fire_size": 2,
+      "control_line_size": 2,
+      "agent_size": 16,
+      "rescale_factor": 16
+    },
+    "simulation": {
+      "update_rate": 1,
+      "runtime": "15h",
+      "headless": false,
+      "draw_spread_graph": false,
+      "record": true,
+      "save_data": true,
+      "data_type": "npy",
+      "sf_home": "/Users/ardyh/Desktop/CSCI513-CPS/project/px4_sandbox/simfire"
+    },
+    "mitigation": {
+      "ros_attenuation": false
+    },
+    "operational": {
+      "seed": null,
+      "latitude": 38.422,
+      "longitude": -118.266,
+      "height": 20000,
+      "width": 20000,
+      "resolution": 30,
+      "year": 2020
+    },
+    "terrain": {
+      "topography": {
+        "type": "operational",
+        "functional": {
+          "function": "perlin",
+          "perlin": {
+            "octaves": 3,
+            "persistence": 0.7,
+            "lacunarity": 2.0,
+            "seed": 827,
+            "range_min": 100.0,
+            "range_max": 300.0
+          },
+          "gaussian": {
+            "amplitude": 500,
+            "mu_x": 50,
+            "mu_y": 50,
+            "sigma_x": 50,
+            "sigma_y": 50
+          }
+        }
+      },
+      "fuel": {
+        "type": "operational",
+        "functional": {
+          "function": "chaparral",
+          "chaparral": {
+            "seed": 1113
+          }
+        },
+        "burn_probability": {
+          "type": "operational",
+          "functional": {
+            "function": "perlin",
+            "perlin": {
+              "octaves": 3,
+              "persistence": 0.7,
+              "lacunarity": 2.0,
+              "seed": 827,
+              "range_min": 100.0,
+              "range_max": 300.0
+            },
+            "gaussian": {
+              "amplitude": 500,
+              "mu_x": 50,
+              "mu_y": 50,
+              "sigma_x": 50,
+              "sigma_y": 50
+            }
+          }
+        }
+      }
+    },
+    "fire": {
+      "fire_initial_position": {
+        "type": "static",
+        "static": {
+          "position": "(25, 25)"
+        },
+        "random": {
+          "seed": 1234
+        }
+      },
+      "max_fire_duration": 5,
+      "diagonal_spread": true
+    },
+    "environment": {
+      "moisture": 0.001
+    },
+    "wind": {
+      "function": "perlin",
+      "cfd": {
+        "time_to_train": 1000,
+        "result_accuracy": 1,
+        "iterations": 1,
+        "scale": 1,
+        "timestep_dt": 1.0,
+        "diffusion": 0.0,
+        "viscosity": 1e-07,
+        "speed": 19.0,
+        "direction": "north"
+      },
+      "simple": {
+        "speed": 7,
+        "direction": 90.0
+      },
+      "perlin": {
+        "speed": {
+          "seed": 2345,
+          "scale": 400,
+          "octaves": 3,
+          "persistence": 0.7,
+          "lacunarity": 2.0,
+          "range_min": 7,
+          "range_max": 47
+        },
+        "direction": {
+          "seed": 650,
+          "scale": 1500,
+          "octaves": 2,
+          "persistence": 0.9,
+          "lacunarity": 1.0,
+          "range_min": 0.0,
+          "range_max": 360.0
+        }
+      }
+    }
+  },
+  "seeds": {
+    "wind_speed": 2345,
+    "wind_direction": 650
+  },
+  "layer_types": {
+    "elevation": "operational",
+    "fuel": "operational"
+  },
+  "shape": [
+    581,
+    581
+  ],
+  "static_data": {
+    "data": {
+      "w_0": "w_0.npy",
+      "sigma": "sigma.npy",
+      "delta": "delta.npy",
+      "M_x": "M_x.npy",
+      "elevation": "elevation.npy",
+      "wind_speed": "wind_speed.npy",
+      "wind_direction": "wind_direction.npy"
+    },
+    "shape": [
+      581,
+      581
+    ]
+  },
+  "fire_map": "fire_map.npy"
+}

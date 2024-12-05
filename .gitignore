@@ -19,3 +19,5 @@ download.py
 coverage.xml
 .mypy_cache
 .pytest_cache
+burnmd/
+.DS_Store
