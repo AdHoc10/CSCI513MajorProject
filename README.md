@@ -1,4 +1,4 @@
-# How to Run Simfire
+# How to Run The Code
 
 1. Set environment.
 I use Conda because it's easier to have a specific version of Python
