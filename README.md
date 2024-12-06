@@ -11,3 +11,5 @@ Then activate env
 4. cd into directory
 5. Run
 ```python tests/vns.py```
+
+The coverage algorithm is mainly in `tests/vns.py`
